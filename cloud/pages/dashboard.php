@@ -28,39 +28,39 @@ if (!isset($_SESSION['user_id'])) {
             <div class="menu">
                 <div class="menu-item"> 
                     <i class="bx bxs-dashboard"></i>
-                    <a href="#">Dashboard</a>
+                    <a href="">Dashboard</a>
                 </div>
                 <div class="menu-item">
                     <i class='bx bxs-wallet'></i>
-                    <a href="#">Withdrawal</a>
+                    <a href="dashboard_files/withdraw.php">Withdrawal</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">💵</i>
-                    <a href="#">Deposit</a>
+                <i class='bx bx-credit-card-alt' ></i>
+                    <a href="dashboard_files/deposit.php">Deposit</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">📈</i>
-                    <a href="#">Invest</a>
+                <i class='bx bx-line-chart' ></i>
+                    <a href="dashboard_files/invest.php">Invest</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">🏦</i>
-                    <a href="#">Active Investments</a>
+                <i class='bx bxs-bank'></i>
+                    <a href="dashboard_files/myinvest.php">Investments</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">👤</i>
-                    <a href="#">Profile</a>
+                    <i class="bx bxs-user-circle"></i>
+                    <a href="dashboard_files/profile.php">Profile</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">📞</i>
-                    <a href="#">Support</a>
+                <i class='bx bx-support' ></i>
+                    <a href="dashboard_files/support.php">Support</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">📜</i>
-                    <a href="#">Genealogy</a>
+                <i class='bx bxs-notepad' ></i>
+                    <a href="dashboard_files/genealogy.php">Genealogy</a>
                 </div>
                 <div class="menu-item">
-                    <i class="icon">🔓</i>
-                    <a href="#">Logout</a>
+                <i class='bx bx-log-out' ></i>
+                    <a href="dashboard_files/logout.php">Logout</a>
                 </div>
             </div>
         </nav>
@@ -104,7 +104,7 @@ if (!isset($_SESSION['user_id'])) {
                 <p>It pays to have friends:</p>
                 <a href="https://nexohorizon.org/cloud/pages/signup?ref=80517590479" target="_blank">https://nexohorizon.org/cloud/pages/signup?ref=80517590479</a>
                 <button class="copy-btn">Copy</button>
-                <p><i class="icon">👤</i> 0 Referred</p>
+                <p><i class="bx bxs-user"></i> 0 Referred</p>
             </div>
 
             <!-- Stock Section -->
