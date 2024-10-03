@@ -1,0 +1,406 @@
+// 所有子站公用
+window.zESettings = {
+    webWidget: {
+        chat: {
+            tags: ['CIMA'],
+            departments: {
+                enabled: ['Vantage FX'],
+                select: 'Vantage FX'
+            }
+        }
+    }
+};
+
+
+jQuery(document).ready(function ($) {
+    //home row5 js
+    $(".home_row5 .home_row5_top .tab_title li").click(function () {
+        var index = $(this).index();
+        $(this).addClass("active").siblings("li").removeClass("active");
+        $(".home_row5 .home_row5_top .tab_list .tab_item:eq(" + index + ")").addClass("active").siblings(".tab_item").removeClass("active");
+    });
+
+    $(".video_right .video_content").click(function () {
+        $(this).addClass("flash_red_box");
+        $(".home_live .home_live_light").addClass("flash_red_box");
+        return false;
+    })
+
+
+    if ($("body").hasClass("home")) {
+        var load_tag = 0;
+        // 首页实时数据
+        // get_symbol();
+        if (window.WebSocket) {
+            var ws = new WebSocket('wss://feed.nitcon-capital.net:9001');
+            // 接收服务器的消息
+            ws.onmessage = function (e) {
+                var data = JSON.parse(e.data);
+                // console.log(data);
+                var forex = data.forex;
+                var indices = data.indices;
+                var commodities = data.commodities;
+                var other = data.other;
+
+
+                // 获取品种
+                var symbol = $(".tab_list .symbol");
+
+                //卖出
+                var bidArr = $(".tab_list .bid_text");
+
+                //中间值
+                var spreadArr = $(".tab_list .spr_text span");
+
+                //买进
+                var askArr = $(".tab_list .ask_text");
+
+                // 品种做比较(双重for循环)
+
+                for (var i = 0; i < symbol.length; i++) {
+
+                    var newSymbol = symbol[i].innerHTML;
+                    // 产品转换
+                    if (newSymbol == "Apple") {
+                        newSymbol = "AAPL";
+                    }
+                    if (newSymbol == "Google") {
+                        newSymbol = "GOOG";
+                    }
+                    if (newSymbol == "Facebook") {
+                        newSymbol = "FB";
+                    }
+                    if (newSymbol == "Netflix") {
+                        newSymbol = "NFLX";
+                    }
+
+                    for (var j = 0; j < forex.length; j++) {
+
+                        if (newSymbol == forex[j].symbol) {
+
+                            // number类型转化为string
+                            if (typeof forex[j].ask == 'number') {
+                                forex[j].ask = String(forex[j].ask);
+                            }
+
+                            if (typeof forex[j].bid == 'number') {
+                                forex[j].bid = String(forex[j].bid);
+                            }
+
+                            //卖出内容填充
+                            bidArr[i].innerHTML = forex[j].bid;
+
+                            //中间值内容填充
+                            var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+                            if (old_data > (parseFloat(forex[j].spread) / 10).toFixed(1)) {
+                                $(".tab_list .spr_text span").eq(i).addClass("red");
+                            } else {
+                                $(".tab_list .spr_text span").eq(i).removeClass("red");
+                            }
+
+                            spreadArr[i].innerHTML = (parseFloat(forex[j].spread) / 10).toFixed(1);
+                            $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(forex[j].spread) / 10).toFixed(1));
+
+                            //买进内容填充
+                            askArr[i].innerHTML = forex[j].ask;
+                        }
+
+                    }
+                    for (var j = 0; j < indices.length; j++) {
+
+                        if (newSymbol == indices[j].symbol) {
+
+                            // number类型转化为string
+                            if (typeof indices[j].ask == 'number') {
+                                indices[j].ask = String(indices[j].ask);
+                            }
+
+                            if (typeof indices[j].bid == 'number') {
+                                indices[j].bid = String(indices[j].bid);
+                            }
+
+                            //卖出内容填充
+                            bidArr[i].innerHTML = indices[j].bid;
+
+                            //中间值内容填充
+                            var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+                            if (old_data > (parseFloat(indices[j].spread) / 100).toFixed(1)) {
+                                $(".tab_list .spr_text span").eq(i).addClass("red");
+                            } else {
+                                $(".tab_list .spr_text span").eq(i).removeClass("red");
+                            }
+                            spreadArr[i].innerHTML = (parseFloat(indices[j].spread) / 100).toFixed(1);
+                            $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(indices[j].spread) / 100).toFixed(1));
+                            //买进内容填充
+                            askArr[i].innerHTML = indices[j].ask;
+                        }
+
+                    }
+                    for (var j = 0; j < commodities.length; j++) {
+
+                        if (newSymbol == commodities[j].symbol) {
+
+                            // number类型转化为string
+                            if (typeof commodities[j].ask == 'number') {
+                                commodities[j].ask = String(commodities[j].ask);
+                            }
+
+                            if (typeof commodities[j].bid == 'number') {
+                                commodities[j].bid = String(commodities[j].bid);
+                            }
+
+                            //卖出内容填充
+                            bidArr[i].innerHTML = commodities[j].bid;
+
+                            //中间值内容填充
+                            var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+                            if (old_data > (parseFloat(commodities[j].spread) / 10).toFixed(1)) {
+                                $(".tab_list .spr_text span").eq(i).addClass("red");
+                            } else {
+                                $(".tab_list .spr_text span").eq(i).removeClass("red");
+                            }
+                            spreadArr[i].innerHTML = (parseFloat(commodities[j].spread) / 10).toFixed(1);
+                            $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(commodities[j].spread) / 10).toFixed(1));
+                            //买进内容填充
+                            askArr[i].innerHTML = commodities[j].ask;
+                        }
+
+                    }
+                    for (var j = 0; j < other.length; j++) {
+
+                        if (newSymbol == other[j].symbol) {
+
+
+
+                            // number类型转化为string
+                            if (typeof other[j].ask == 'number') {
+                                other[j].ask = String(other[j].ask);
+                            }
+
+                            if (typeof other[j].bid == 'number') {
+                                other[j].bid = String(other[j].bid);
+                            }
+
+                            //卖出内容填充
+                            bidArr[i].innerHTML = other[j].bid;
+
+                            //中间值内容填充
+                            var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+                            if (old_data > (parseFloat(other[j].spread) / 10).toFixed(1)) {
+                                $(".tab_list .spr_text span").eq(i).addClass("red");
+                            } else {
+                                $(".tab_list .spr_text span").eq(i).removeClass("red");
+                            }
+                            spreadArr[i].innerHTML = (parseFloat(other[j].spread) / 10).toFixed(1);
+                            $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(other[j].spread) / 10).toFixed(1));
+
+                            //买进内容填充
+                            askArr[i].innerHTML = other[j].ask;
+                        }
+
+                    }
+                }
+                if (load_tag == 0) {
+                    $(".tab_list .loading").fadeOut(500, function () {
+                        $(".tab_item").fadeIn(500);
+                    });
+                    load_tag = 1;
+                }
+
+            }
+        }
+    }
+
+    // function get_symbol() {
+    //     $.ajax({
+    //         type: "post",
+    //         url: '/data/get_home.php',
+    //         dataType: "json",
+    //         success: function (data) {
+    //             // var data = data.substring(12,data.length-1);
+    //             // var data= JSON.parse(data);
+    //             var forex = data.forex;
+    //             var indices = data.indices;
+    //             var commodities = data.commodities;
+    //             var other = data.other;
+
+
+    //             // 获取品种
+    //             var symbol = $(".tab_list .symbol");
+
+    //             //卖出
+    //             var bidArr = $(".tab_list .bid_text");
+
+    //             //中间值
+    //             var spreadArr = $(".tab_list .spr_text span");
+
+    //             //买进
+    //             var askArr = $(".tab_list .ask_text");
+
+    //             // 品种做比较(双重for循环)
+
+    //             for (var i = 0; i < symbol.length; i++) {
+
+    //                 var newSymbol = symbol[i].innerHTML;
+    //                 // 产品转换
+    //                 if (newSymbol == "Apple") {
+    //                     newSymbol = "AAPL";
+    //                 }
+    //                 if (newSymbol == "Google") {
+    //                     newSymbol = "GOOG";
+    //                 }
+    //                 if (newSymbol == "Facebook") {
+    //                     newSymbol = "FB";
+    //                 }
+    //                 if (newSymbol == "Netflix") {
+    //                     newSymbol = "NFLX";
+    //                 }
+
+    //                 for (var j = 0; j < forex.length; j++) {
+
+    //                     if (newSymbol == forex[j].symbol) {
+
+    //                         // number类型转化为string
+    //                         if (typeof forex[j].ask == 'number') {
+    //                             forex[j].ask = String(forex[j].ask);
+    //                         }
+
+    //                         if (typeof forex[j].bid == 'number') {
+    //                             forex[j].bid = String(forex[j].bid);
+    //                         }
+
+    //                         //卖出内容填充
+    //                         bidArr[i].innerHTML = forex[j].bid;
+
+    //                         //中间值内容填充
+    //                         var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+    //                         if (old_data > (parseFloat(forex[j].spread) / 10).toFixed(1)) {
+    //                             $(".tab_list .spr_text span").eq(i).addClass("red");
+    //                         } else {
+    //                             $(".tab_list .spr_text span").eq(i).removeClass("red");
+    //                         }
+
+    //                         spreadArr[i].innerHTML = (parseFloat(forex[j].spread) / 10).toFixed(1);
+    //                         $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(forex[j].spread) / 10).toFixed(1));
+
+    //                         //买进内容填充
+    //                         askArr[i].innerHTML = forex[j].ask;
+    //                     }
+
+    //                 }
+    //                 for (var j = 0; j < indices.length; j++) {
+
+    //                     if (newSymbol == indices[j].symbol) {
+
+    //                         // number类型转化为string
+    //                         if (typeof indices[j].ask == 'number') {
+    //                             indices[j].ask = String(indices[j].ask);
+    //                         }
+
+    //                         if (typeof indices[j].bid == 'number') {
+    //                             indices[j].bid = String(indices[j].bid);
+    //                         }
+
+    //                         //卖出内容填充
+    //                         bidArr[i].innerHTML = indices[j].bid;
+
+    //                         //中间值内容填充
+    //                         var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+    //                         if (old_data > (parseFloat(indices[j].spread) / 10).toFixed(1)) {
+    //                             $(".tab_list .spr_text span").eq(i).addClass("red");
+    //                         } else {
+    //                             $(".tab_list .spr_text span").eq(i).removeClass("red");
+    //                         }
+    //                         spreadArr[i].innerHTML = (parseFloat(indices[j].spread) / 10).toFixed(1);
+    //                         $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(indices[j].spread) / 10).toFixed(1));
+    //                         //买进内容填充
+    //                         askArr[i].innerHTML = indices[j].ask;
+    //                     }
+
+    //                 }
+    //                 for (var j = 0; j < commodities.length; j++) {
+
+    //                     if (newSymbol == commodities[j].symbol) {
+
+    //                         // number类型转化为string
+    //                         if (typeof commodities[j].ask == 'number') {
+    //                             commodities[j].ask = String(commodities[j].ask);
+    //                         }
+
+    //                         if (typeof commodities[j].bid == 'number') {
+    //                             commodities[j].bid = String(commodities[j].bid);
+    //                         }
+
+    //                         //卖出内容填充
+    //                         bidArr[i].innerHTML = commodities[j].bid;
+
+    //                         //中间值内容填充
+    //                         var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+    //                         if (old_data > (parseFloat(commodities[j].spread) / 10).toFixed(1)) {
+    //                             $(".tab_list .spr_text span").eq(i).addClass("red");
+    //                         } else {
+    //                             $(".tab_list .spr_text span").eq(i).removeClass("red");
+    //                         }
+    //                         spreadArr[i].innerHTML = (parseFloat(commodities[j].spread) / 10).toFixed(1);
+    //                         $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(commodities[j].spread) / 10).toFixed(1));
+    //                         //买进内容填充
+    //                         askArr[i].innerHTML = commodities[j].ask;
+    //                     }
+
+    //                 }
+    //                 for (var j = 0; j < other.length; j++) {
+
+    //                     if (newSymbol == other[j].symbol) {
+
+
+
+    //                         // number类型转化为string
+    //                         if (typeof other[j].ask == 'number') {
+    //                             other[j].ask = String(other[j].ask);
+    //                         }
+
+    //                         if (typeof other[j].bid == 'number') {
+    //                             other[j].bid = String(other[j].bid);
+    //                         }
+
+    //                         //卖出内容填充
+    //                         bidArr[i].innerHTML = other[j].bid;
+
+    //                         //中间值内容填充
+    //                         var old_data = parseFloat($(".tab_list .spr_text span").eq(i).attr("data"));
+
+    //                         if (old_data > (parseFloat(other[j].spread) / 10).toFixed(1)) {
+    //                             $(".tab_list .spr_text span").eq(i).addClass("red");
+    //                         } else {
+    //                             $(".tab_list .spr_text span").eq(i).removeClass("red");
+    //                         }
+    //                         spreadArr[i].innerHTML = (parseFloat(other[j].spread) / 10).toFixed(1);
+    //                         $(".tab_list .spr_text span").eq(i).attr("data", (parseFloat(other[j].spread) / 10).toFixed(1));
+
+    //                         //买进内容填充
+    //                         askArr[i].innerHTML = other[j].ask;
+    //                     }
+
+    //                 }
+    //             }
+    //             if (load_tag == 0) {
+    //                 $(".tab_list .loading").fadeOut(500, function () {
+    //                     $(".tab_item").fadeIn(500);
+    //                 });
+    //                 load_tag = 1;
+    //             }
+    //             setTimeout(function () {
+    //                 get_symbol();
+    //             }, 8000);
+
+    //         }
+    //     })
+    // }
+});

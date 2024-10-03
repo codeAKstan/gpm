@@ -1,0 +1,246 @@
+function getPar(par) {
+	//获取当前URL
+	var local_url = document.location.href;
+	//获取要取得的get参数位置
+	var get = local_url.indexOf(par + "=");
+	if (get == -1) {
+		return false;
+	}
+	//截取字符串
+	var get_par = local_url.slice(par.length + get + 1);
+	//判断截取后的字符串是否还有其他get参数
+	var nextPar = get_par.indexOf("&");
+	if (nextPar != -1) {
+		get_par = get_par.slice(0, nextPar);
+	}
+	return get_par;
+}
+
+function setCookie(name,value,days) {
+	if (days) {
+	var date = new Date();
+	date.setTime(date.getTime()+(days*24*60*60*1000));
+	var expires = "; expires="+date.toGMTString();
+	}
+	else expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function getCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+	var c = ca[i];
+	while (c.charAt(0)==' ') c = c.substring(1,c.length);
+	if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return "";
+}
+
+function GetUrl(sProp)
+{
+	var re = new RegExp("[&,?]"+sProp + "=([^\\&]*)", "i");
+	var a = re.exec(document.location.search);
+	if (a == null)
+	return "";
+	return a[1];
+}
+
+function getQueryString(name) {
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+		return unescape(r[2]);
+	}
+	return null;
+}
+
+// 时间戳随机数 （用于ip跳转）
+function Data()
+{
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1;
+	var strDate = date.getDate();
+	if (month >= 1 && month <= 9) {
+		month = "0" + month;
+	}
+	if (strDate >= 0 && strDate <= 9) {
+		strDate = "0" + strDate;
+	}
+	var newRandom = "";
+	for(var i=0;i<5;i++)
+	{
+		newRandom += Math.floor(Math.random()*9 + 1).toString();
+	}
+	var currentdate =  year + month + strDate + newRandom;
+	return currentdate;
+}
+
+jQuery(document).ready(function ($) {
+	var g_affid="",g_cpaid="",g_ls="",g_cid="",g_wid="VFX",g_cxd="",g_language="en_US";
+
+$("#phoneCode").val("");
+$("#phoneCode").attr("placeholder","Code");
+
+
+    // 注册表单参数开始
+    if(GetUrl("ls")!="")
+	{
+		setCookie("ls",GetUrl("ls"),90);
+	}
+
+	if(GetUrl("cpaid")!="")
+	{
+		setCookie("cpaid",GetUrl("cpaid"),15);
+	}
+
+	if(GetUrl("affid")!="")
+	{
+		var myaffid = GetUrl("affid");
+
+		//  myaffid = myaffid.substring(0,myaffid.indexOf("_"));
+
+		setCookie("affid",myaffid,15);
+	}
+
+	if(GetUrl("cxd")!="")
+	{
+		setCookie("cxd",GetUrl("cxd"),15);
+		var cpaids = GetUrl("cxd");
+		var cpaids1 = cpaids.split("_");
+		setCookie("cpaid",cpaids1[0],15)
+
+	//	setCookie("cpaid",GetUrl("cxd").replace(/_/g,''),1);
+	}
+
+	if(GetUrl("cid")!=""){
+		setCookie("cid",GetUrl("cid"),90);
+	}
+
+	var dtp="";
+	var promise = new Promise(function(resolve, reject){
+		
+		window['dtpCallback'].registerConversion(function (clickId) {
+
+			dtp=clickId;
+			setCookie("cid",dtp,90);
+			resolve();
+		});
+		
+	})
+	
+	promise.then(function(){
+		
+		// console.log('第2种模式 '+getCookie("cid"));
+		if(getCookie("cid")&&getCookie("cid")!=""&&getCookie("cid")!=null&&getCookie("cid")!="null")
+		{
+			g_cid=getCookie("cid");
+		}
+		// console.log(g_cid);
+		$("#cid").val(g_cid);
+		$("input.cid").val(g_cid);
+		$(".cid input").val(g_cid);
+		// console.log('第2种模式 '+$(".cid input").val());
+		
+	})
+
+	// 注册表单参数结束
+
+	
+
+	if(getCookie("cpaid")&&getCookie("cpaid")!=""&&getCookie("cpaid")!=null&&getCookie("cpaid")!="null")
+    {
+		var g_cpaid=getCookie("cpaid");
+	}
+	if(GetUrl("cpaid")!="")
+	{
+		var g_cpaid=GetUrl("cpaid");
+	}
+
+
+	if(getCookie("affid")&&getCookie("affid")!=""&&getCookie("affid")!=null&&getCookie("affid")!="null")
+	{
+		var g_affid=getCookie("affid");
+	}
+	if(GetUrl("affid")!="")
+	{
+		var g_affid=GetUrl("affid");
+	}
+
+
+	if(getCookie("cxd")&&getCookie("cxd")!=""&&getCookie("cxd")!=null&&getCookie("cxd")!="null")
+    {
+		var g_cxd=getCookie("cxd");
+	}
+	if(GetUrl("cxd")!="")
+	{
+		var g_cxd=GetUrl("cxd");
+	}
+
+
+	if(getCookie("ls")&&getCookie("ls")!=""&&getCookie("ls")!=null&&getCookie("ls")!="null")
+	{
+		var g_ls=getCookie("ls");
+	}
+	if(GetUrl("ls")!="")
+	{
+		var g_ls=GetUrl("ls");
+	}
+
+
+	if(getCookie("cid")&&getCookie("cid")!=""&&getCookie("cid")!=null&&getCookie("cid")!="null")
+	{
+		var g_cid=getCookie("cid");
+	}
+	if(GetUrl("cid")!="")
+	{
+		var g_cid=GetUrl("cid");
+	}
+	
+
+	$("#affid").val(g_affid);
+	$("#cpaid").val(g_cpaid);
+	$("#wid").val(g_wid);
+	$("#cxd").val(g_cxd);
+	$("#ls").val(g_ls);
+	$("#input_24_9").val(g_cxd);
+	$("#cid").val(g_cid);
+
+	$("input.affid").val(g_affid);
+	$("input.cpaid").val(g_cpaid);
+	$("input.wid").val(g_wid);
+	$("input.cxd").val(g_cxd);
+	$("input.ls").val(g_ls);
+	$("input#language").val(g_language);
+	$("input.cid").val(g_cid);
+
+	$(".affid input").val(g_affid);
+	$(".cpaid input").val(g_cpaid);
+	$(".wid input").val(g_wid);
+	$(".cxd input").val(g_cxd);
+	$(".ls input").val(g_ls);
+	$(".cid input").val(g_cid);
+
+
+	// iframe 开始
+	var ls=getPar("ls");
+
+	var myiframe = $("#myiframe").attr("src");
+	if (ls!=false) {
+		setCookie('ls',ls,90);
+		$("#myiframe").attr("src",myiframe+ls);
+	}else{
+		var cookiels = getCookie("ls");
+		if(cookiels!=''){
+			$("#myiframe").attr("src",myiframe+cookiels);
+		}else{
+			$("#myiframe").attr("src",'');
+		}
+	}
+	// iframe 结束
+
+})
+
+
+

@@ -1,0 +1,348 @@
+jQuery(document).ready(function($){
+	var iframe=0;
+	if (self != top) {
+		iframe=1;
+	}
+	if($("#tbody1").length>0&&iframe==0)
+	{
+
+    // 产品数据
+    var forexData=[{
+        symbol:"EURUSD",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_forex_img1.png"
+    },{
+        symbol:"AUDUSD",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_forex_img2.png"
+    },{
+        symbol:"GBPUSD",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_forex_img3.png"
+    },{
+        symbol:"USDJPY",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_forex_img4.png"
+    }]
+
+    var comData=[{
+        symbol:"CL-OIL",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_commodities_img1.png"
+    },{
+        symbol:"XAUUSD",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_commodities_img2.png"
+    },{
+        symbol:"XAGUSD",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_commodities_img3.png"
+    },{
+        symbol:"COPPER-C",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_commodities_img4.png"
+    }]
+
+    var indicesData=[{
+        symbol:"SPI200",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_indices_img1.png"
+    },{
+        symbol:"DAX30",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_indices_img2.png"
+    },{
+        symbol:"SP500",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_indices_img3.png"
+    },{
+        symbol:"DJ30",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_indices_img3.png"
+    }]
+
+    var cfdData=[{
+        symbol:"AAPL",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_share_cfds_img1.png"
+    },{
+        symbol:"GOOG",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_share_cfds_img2.png"
+    },{
+        symbol:"FB",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_share_cfds_img3.png"
+    },{
+        symbol:"NFLX",
+        img:"/wp-content/themes/vfx_new/images/home_row1_tab_share_cfds_img4.png"
+    }]
+
+
+    getMsg("/data/getdataAll.php","/data/getecharts_new.php",$("#tbody1"),1,forexData);
+    getMsg("/data/getdataAll.php","/data/getecharts_new.php",$("#tbody2"),2,comData);
+    getMsg("/data/getdataAll.php","/data/getecharts_new.php",$("#tbody3"),3,indicesData);
+    getMsg("/data/getdataAll.php","/data/getecharts_new.php",$("#tbody4"),4,cfdData);
+
+	}
+    // 选项卡下数据加载等
+    function getMsg(url,url1,obj,num,arr){
+        var html1='';
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            data:"flag="+num,
+            success: function(msg) {
+                // console.log(msg)
+                var tops=msg.tops;
+                //加载动画消失
+                if($.isEmptyObject(msg)==false){
+                    $(".rotate_data").css({
+                        "display":"none",
+                        "animation":"none",
+                        "-webkit-animation":"none"
+                    });
+                }
+                //暂无数据显示
+                if(msg==0){
+
+                   obj.parents(".right_table").find(".no_data").show();
+                }
+
+                // 双重for循环比较产品名
+                for(var i in tops ){
+
+                    for (var j = 0;j<arr.length;j++) {
+
+                        if(tops[i].symbol==arr[j].symbol){
+
+                        // 产品转换
+                            if(tops[i].symbol=="EURUSD"){
+                                arr[j].symbol="EUR / USD";
+                            }
+                            if(tops[i].symbol=="AUDUSD"){
+                                arr[j].symbol="AUD / USD";
+                            }
+                            if(tops[i].symbol=="GBPUSD"){
+                                arr[j].symbol="GBP / USD";
+                            }
+                            if(tops[i].symbol=="USDJPY"){
+                                arr[j].symbol="USD / JPY";
+                            }
+                            if(tops[i].symbol=="AAPL"){
+                                arr[j].symbol="Apple";
+                            }
+                            if(tops[i].symbol=="GOOG"){
+                                arr[j].symbol="Google";
+                            }
+                            if(tops[i].symbol=="FB"){
+                                arr[j].symbol="Facebook";
+                            }
+                            if(tops[i].symbol=="NFLX"){
+                                arr[j].symbol="Netflix";
+                            }
+
+
+                            html1+='<tr>'+
+                                        '<td>'+arr[j].symbol+'</td>'+
+                                        '<td><img src="'+arr[j].img+'" alt="" /></td>'+
+                                        '<td class="change">'+toPercent(tops[i].changePercentage)+'</td>'+
+                                        '<td class="echarts_wrapper"><div id="echarts'+num+i+'"></div></td>'+
+                                    '</tr>'
+                                    obj.html(html1);
+                            ColorHref();
+                            // echarts 图表渲染
+
+                            var line_color="#00be00";
+                            var shadow_color="#e0f3dd";
+
+                        if(toPercent(tops[i].changePercentage).indexOf("-") > -1){
+                                line_color="#ea1917";
+                                shadow_color="#ffece8";
+                            }
+
+                            createAjax(url1,tops[i].symbol,num,i,tops,line_color,shadow_color);
+
+
+                        }
+                    }
+
+
+                }
+
+            }
+        });
+    }
+    // getMsg($("#tbody1"),1,forexData);
+    // getMsg($("#tbody2"),2,comData);
+    // getMsg($("#tbody3"),3,indicesData);
+    // getMsg($("#tbody4"),4,cfdData);
+
+
+
+
+
+    function createAjax(url,symbol,n,t,j,color,shadow){
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            data:"symbol="+encodeURIComponent(escape2Html(j[t].symbol)),
+            success: function(msg){
+                // console.log(j[t].symbol);
+                // console.log(msg);
+                var volume = [];
+                var high = [];
+                var sum="";
+                sum = msg;
+                var volumeA=[];
+                var highA=[];
+                sum.map(function(item){
+                    volumeA.push(item.close);
+
+                });
+
+                sum.map(function(item){
+
+                    highA.push(item.time.slice(11,18));
+                });
+
+                volume=volumeA;
+                high=highA;
+                var foreign=document.getElementById('echarts'+n+t);
+                var myChart = echarts.init(foreign);
+                var option = {
+                    tooltip: {
+                        formatter:"<span style='color:#ACACAC'>time</span> <br/>{b} <br/><span style='color:#ACACAC'>price</span> <br/>{c}",
+                        trigger: 'axis',
+                        // extraCssText:'z-index:44',
+                        // transitionDuration : 2,
+                        backgroundColor: '#fff',
+                        borderColor: '#F4F4F9',
+                        borderRadius: 4,
+                        borderWidth: 1,
+                        padding: 15,
+                        textStyle: {
+                            color: '#000'
+                        }
+                        // position: ['-100%', '-50%']
+
+                    },
+                    grid:{
+                        left: 0, //grid 组件离容器左侧的距离。
+                        top:0,
+                        right: 0,
+                        bottom: 0
+
+                    },
+                    xAxis: {
+                        show: false,
+                        type: 'category',
+                        data: high,
+                        min:'dataMin',
+                        max:'dataMax',
+                        axisTick:{   //去掉刻度线
+                                show:false
+                            },
+                        splitLine: {
+                            show: true,
+                                lineStyle: {
+                                color: '#F4F4F9' // 修改网格线颜色
+                                }
+                        },
+                        axisLine:{
+                            lineStyle:{
+                                color:'#4A4A4A', // x坐标轴的轴线颜色
+                                width:0 //这里是坐标轴的宽度,为0就是不显示
+                                }
+
+                        },
+                        boundaryGap: false //坐标轴两边留白策略
+                    },
+                    yAxis: {
+                        show: false,
+                        type: 'value',
+                        position:'right',
+                        min:'dataMin',
+                        max:'dataMax',
+                            axisTick:{   //去掉刻度线
+                                show:false
+                            },
+                        splitLine: {
+                            show: true,
+                                lineStyle: {
+                                color: '#F4F4F9' // 修改网格线颜色
+                                }
+                        },
+                        axisLine:{
+                            lineStyle:{
+                                color:'#4A4A4A', // x坐标轴的轴线颜色
+                                width:0 //这里是坐标轴的宽度,为0就是不显示
+                                }
+
+                            },
+                            splitNumber:3
+                    },
+                    series: [{
+                        data:volume,
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        lineStyle: { //线条样式。
+                            color: color,
+
+                            width:1
+
+                        },
+                        areaStyle: { //区域填充样式。
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                    offset: 0,
+                                    color: shadow
+                                }, {
+                                    offset: 1,
+                                    color: '#fff'
+                                }])
+                            }
+
+                        }
+                    }]
+
+                };
+                myChart.clear();
+                myChart.setOption(option,true);
+                /*
+                $(window).resize(function(){
+
+                    myChart.resize();
+                })
+                */
+
+
+
+
+
+
+
+            }
+
+        })
+
+    }
+
+
+    //涨跌幅文字
+    function toPercent(point){
+
+        var str=Number(point).toFixed(2);
+            if(point>0){
+            str="+"+str;
+        }
+        str+="%";
+        return str;
+    }
+    // 涨跌幅颜色
+    function ColorHref(){
+        $(".change").each(function() {
+            var text_color = $(this).html();
+            if(text_color.indexOf("+") > -1) {
+                $(this).addClass("green_text")
+            }else if(text_color.indexOf("-") > -1){
+                $(this).addClass("red_text")
+            }else{
+                $(this).addClass("black_text")
+            }
+
+        })
+    }
+    function escape2Html(str) {
+        var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+        return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+    }
+})
