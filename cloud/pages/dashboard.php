@@ -15,6 +15,46 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="dashboard_files/styles.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c1fbfe0463.js" crossorigin="anonymous"></script>
+    <style>
+           .referral-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #e0e7ff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .referral-link input {
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      color: #333;
+      width: 100%;
+    }
+
+    .copy-button {
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+
+      .referral-link {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .copy-button {
+        margin-top: 10px;
+      }
+    }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -74,7 +114,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             
                 <div class="user-icon">
-                    <img src="dashboard_files/img/user.png" alt="user" class="icon">
+                    <img src="dashboard_files/img/user.png" alt="user" onclick='window.location.href="dashboard_files/profile.php"' class="icon">
                 </div>
             </header>
 
@@ -101,10 +141,11 @@ if (!isset($_SESSION['user_id'])) {
             <!-- Referral Section -->
             <div class="referral-section">
                 <h2>Refer friends and earn 💰</h2>
-                <p>It pays to have friends:</p>
-                <a href="https://nexohorizon.org/cloud/pages/signup?ref=80517590479" target="_blank">https://nexohorizon.org/cloud/pages/signup?ref=80517590479</a>
-                <button class="copy-btn">Copy</button>
-                <p><i class="bx bxs-user"></i> 0 Referred</p>
+                <div class="referral-link">
+        <input type="text" value="https://gpm.com/cloud/pages/signup?ref=80517590479" readonly>
+        <button class="copy-button">Copy</button>
+      </div>
+                <!-- <p><i class="bx bxs-user"></i> 0 Referred</p> -->
             </div>
 
             <!-- Stock Section -->
@@ -150,5 +191,14 @@ if (!isset($_SESSION['user_id'])) {
             sidebar.classList.toggle('active');
         });
     </script>
+       <script>
+    document.querySelector('.copy-button').addEventListener('click', function () {
+      const referralLink = document.querySelector('.referral-link input');
+      referralLink.select();
+      referralLink.setSelectionRange(0, 99999); // For mobile devices
+      navigator.clipboard.writeText(referralLink.value);
+      alert('Referral link copied!');
+    });
+  </script>
 </body>
 </html>

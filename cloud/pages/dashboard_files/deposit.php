@@ -11,10 +11,107 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genealogy</title>
+    <title>Deposit</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c1fbfe0463.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- Include jQuery (needed for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <style>
+
+    .deposit-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      align-items: center;
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 70%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .form-group .currency {
+      font-size: 18px;
+      font-weight: bold;
+      padding-left: 10px;
+      color: #333;
+    }
+
+    .form-group input[readonly] {
+      background-color: #f5f5f5;
+      text-align: right;
+      color: #333;
+    }
+
+    .btn-deposit {
+      width: 30%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-deposit:hover {
+      background-color: #0056b3;
+    }
+    .img-flag {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .form-group select,
+      .form-group input,
+      .btn-deposit {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .currency {
+        padding: 0;
+        margin-top: 10px;
+        text-align: left;
+      }
+    }
+  </style>
    
 </head>
 <body>
@@ -75,9 +172,34 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             
                 <div class="user-icon">
-                    <img src="img/user.png" alt="user" class="icon">
+                <img src="img/user.png" alt="user" onclick='window.location.href="profile.php"' class="icon">
                 </div>
             </header>
+
+            <div class="deposit-container">
+    <h2>ACCOUNT DEPOSIT</h2>
+    <div class="form-group">
+    <select id="payment-method" style="width: 100%;">
+    <option value="">--Select Payment Method--</option>
+    <option data-image="img/btc.png">Bitcoin</option>
+    <option data-image="img/usdt.png">USDT</option>
+    <option data-image="img/eth.png">Ethereum</option>
+    <option data-image="img/paypal.png">Paypal</option>
+    <option data-image="img/skrill.png">Skrill</option>
+    <option data-image="img/cashapp.png">Cash App</option>
+    <option data-image="img/venmo.png">Venmo</option>
+  </select>
+      <input type="text" readonly value="$ 0.00" class="currency">
+    </div>
+
+    <div class="form-group">
+      <input type="number" placeholder="Amount (USD)">
+    </div>
+
+    <div class="form-group">
+      <button class="btn-deposit">Deposit Now</button>
+    </div>
+  </div>
 
             
 
@@ -97,5 +219,24 @@ if (!isset($_SESSION['user_id'])) {
             sidebar.classList.toggle('active');
         });
     </script>
+      <script>
+    $(document).ready(function() {
+      function formatState(state) {
+        if (!state.id) {
+          return state.text; // Return without changes for placeholder option
+        }
+        var $state = $(
+          '<span><img src="' + $(state.element).attr('data-image') + '" class="img-flag" />' + state.text + '</span>'
+        );
+        return $state;
+      }
+
+      $('#payment-method').select2({
+        templateResult: formatState,
+        templateSelection: formatState,
+        minimumResultsForSearch: Infinity // Hide search box
+      });
+    });
+  </script>
 </body>
 </html>

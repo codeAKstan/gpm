@@ -178,7 +178,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             
                 <div class="user-icon">
-                    <img src="img/user.png" alt="user" class="icon">
+                <img src="img/user.png" alt="user" onclick='window.location.href="profile.php"' class="icon">
                 </div>
             </header>
 
@@ -198,7 +198,7 @@ if (!isset($_SESSION['user_id'])) {
       <h2>Refer friends and earn 💰</h2>
       <p>This is just our way of saying thanks:</p>
       <div class="referral-link">
-        <input type="text" value="https://stormgold.net/cloud/pages/signup?ref=80517590479" readonly>
+        <input type="text" value="https://gpm.com/cloud/pages/signup?ref=80517590479" readonly>
         <button class="copy-button">Copy</button>
       </div>
     </div>

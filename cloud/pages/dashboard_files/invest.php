@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genealogy</title>
+    <title>Invest</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c1fbfe0463.js" crossorigin="anonymous"></script>
@@ -148,7 +148,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             
                 <div class="user-icon">
-                    <img src="img/user.png" alt="user" class="icon">
+                <img src="img/user.png" alt="user" onclick='window.location.href="profile.php"' class="icon">
                 </div>
             </header>
             <div class="in-container">
@@ -158,10 +158,38 @@ if (!isset($_SESSION['user_id'])) {
         <h3>BEGINNER PLAN</h3>
         <div class="price">From $300.00</div>
         <ul>
-          <li>$999.00 Maximum</li>
+          <li>$9,999,999.00 Maximum</li>
           <li>Daily Payout</li>
-          <li>10% ROI Daily</li>
-          <li>Period of 30</li>
+          <li>Deposit $300 get $16,000 in profit</li>
+          <li>Period of 24-72 hours</li>
+          <li>Instant Payout</li>
+          <li>Instant Withdrawal</li>
+        </ul>
+        <button>Proceed</button>
+      </div>
+
+      <div class="plan">
+        <h3>INTERMIDATE PLAN</h3>
+        <div class="price">From $500.00</div>
+        <ul>
+          <li>$9,999,999.00 Maximum</li>
+          <li>Daily Payout</li>
+          <li>Deposit $500 get $22,000 in profit</li>
+          <li>Period of 24-72 hours</li>
+          <li>Instant Payout</li>
+          <li>Instant Withdrawal</li>
+        </ul>
+        <button>Proceed</button>
+      </div>
+
+      <div class="plan">
+        <h3>SILVER PLAN</h3>
+        <div class="price">From $1,000.00</div>
+        <ul>
+          <li>$9,999,999.00 Maximum</li>
+          <li>Daily Payout</li>
+          <li>Deposit $1,000 get $30,000 in profit</li>
+          <li>Period of 24-72 hours</li>
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
@@ -170,12 +198,12 @@ if (!isset($_SESSION['user_id'])) {
 
       <div class="plan">
         <h3>GOLD PLAN</h3>
-        <div class="price">From $1,000.00</div>
+        <div class="price">From $2,000.00</div>
         <ul>
-          <li>$4,999.00 Maximum</li>
+          <li>$9,999,999.00 Maximum</li>
           <li>Daily Payout</li>
-          <li>25% ROI Daily</li>
-          <li>Period of 24</li>
+          <li>Deposit $2,000 get $50,000 in profit</li>
+          <li>Period of 24-72 hours</li>
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
@@ -188,8 +216,8 @@ if (!isset($_SESSION['user_id'])) {
         <ul>
           <li>$9,999,999.00 Maximum</li>
           <li>Daily Payout</li>
-          <li>45% ROI Daily</li>
-          <li>Period of 3</li>
+          <li>Deposit $5,000 get $85,000 in profit</li>
+          <li>Period of 24-72 hours</li>
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
@@ -197,12 +225,12 @@ if (!isset($_SESSION['user_id'])) {
       </div>
       <div class="plan">
         <h3>DIAMOND PLAN</h3>
-        <div class="price">From $7,000.00</div>
+        <div class="price">From $10,000.00</div>
         <ul>
           <li>$9,999,999.00 Maximum</li>
           <li>Daily Payout</li>
-          <li>Deposit $10,000 get $200,000 in profit</li>
-          <li>Period of 10</li>
+          <li>Deposit $10,000 get $150,000 in profit</li>
+          <li>Period of 24-72 hours</li>
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>

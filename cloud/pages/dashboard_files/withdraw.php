@@ -11,10 +11,95 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genealogy</title>
+    <title>Withdraw</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c1fbfe0463.js" crossorigin="anonymous"></script>
+    <style>
+
+.wallet-container {
+    max-width: 700px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.wallet-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.wallet-header h2 {
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.wallet-details {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.wallet-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.wallet-row .label {
+    color: #555;
+    font-size: 16px;
+}
+
+.wallet-row .separator {
+    flex-grow: 1;
+    text-align: center;
+    color: #aaa;
+}
+
+.wallet-row .amount {
+    color: #000;
+    font-size: 16px;
+}
+
+.withdraw-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.withdraw-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.withdraw-button:hover {
+    background-color: #c9302c;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .wallet-row {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .wallet-row .amount {
+        margin-top: 10px;
+    }
+
+    .withdraw-container {
+        justify-content: center;
+    }
+}
+    </style>
    
 </head>
 <body>
@@ -75,9 +160,30 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             
                 <div class="user-icon">
-                    <img src="img/user.png" alt="user" class="icon">
+                <img src="img/user.png" alt="user" onclick='window.location.href="profile.php"' class="icon">
                 </div>
             </header>
+
+            <div class="wallet-container">
+        <div class="wallet-header">
+            <h2>WALLET BALANCE</h2>
+        </div>
+        <div class="wallet-details">
+            <div class="wallet-row">
+                <span class="label">Available Balance</span>
+                <span class="separator">-</span>
+                <span class="amount">0.00 USD</span>
+            </div>
+            <div class="wallet-row">
+                <span class="label">ROI Balance</span>
+                <span class="separator">-</span>
+                <span class="amount">0.00 USD</span>
+            </div>
+        </div>
+        <div class="withdraw-container">
+            <button class="withdraw-button">Withdraw</button>
+        </div>
+    </div>
 
             
 

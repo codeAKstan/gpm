@@ -140,7 +140,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             
                 <div class="user-icon">
-                    <img src="img/user.png" alt="user" class="icon">
+                <img src="img/user.png" alt="user" onclick='window.location.href="profile.php"' class="icon">
                 </div>
             </header>
 
