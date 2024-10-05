@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deposit</title>
+    <title>withdraw</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c1fbfe0463.js" crossorigin="anonymous"></script>
@@ -178,20 +178,23 @@ h2 {
             </header>
 
             <div class="deposit-container">
-                <h2>ACCOUNT DEPOSIT</h2>
-                <form action="wallet_deposit.php" method="POST">
+                <h2>Wallet withdrawal</h2>
+                <form action="process_withdraw.php" method="POST">
     <div class="form-group">
         <select id="payment-method" name="payment_method" style="width: 100%;" required>
-            <option value="">--Select Payment Method--</option>
+            <option value="">--Select Withdrawal Method--</option>
             <option value="Bitcoin" data-image="img/btc.png">Bitcoin</option>
             <option value="USDT" data-image="img/usdt.png">USDT</option>
             <option value="Ethereum" data-image="img/eth.png">Ethereum</option>
-            <option value="Paypal" data-image="img/paypal.png">Paypal</option>
+            <!-- <option value="Paypal" data-image="img/paypal.png">Paypal</option>
             <option value="Skrill" data-image="img/skrill.png">Skrill</option>
             <option value="CashApp" data-image="img/cashapp.png">Cash App</option>
-            <option value="Venmo" data-image="img/venmo.png">Venmo</option>
+            <option value="Venmo" data-image="img/venmo.png">Venmo</option> -->
         </select>
-        <input type="text" readonly value="$ 0.00" class="currency">
+        <!-- <input type="text" readonly value="$ 0.00" class="currency"> -->
+    </div>
+    <div class="form-group">
+        <input type="text" name="address" placeholder="Address " required>
     </div>
 
     <div class="form-group">

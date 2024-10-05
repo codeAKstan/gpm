@@ -4,6 +4,12 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit;
 }
+include "db_conn.php";
+
+$query = "SELECT balance, withdraw, roi FROM portfolio WHERE user_id = ?";
+$stmt = $conn->prepare($query);
+$stmt->execute([$_SESSION['user_id']]);
+$portfolio = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -121,15 +127,15 @@ if (!isset($_SESSION['user_id'])) {
             <!-- Top Section -->
             <div class="top-section">
                 <div class="card">
-                    <h3>$0.00</h3>
+                    <h3>$<?= number_format($portfolio['balance'], 2) ?></h3>
                     <p>BALANCE</p>
                 </div>
                 <div class="card">
-                    <h3>$0.00</h3>
+                    <h3>$<?= number_format($portfolio['roi'], 2) ?></h3>
                     <p>ACTIVE INVESTMENT</p>
                 </div>
                 <div class="card">
-                    <h3>$0.00</h3>
+                    <h3>$<?= number_format($portfolio['withdraw'], 2) ?></h3>
                     <p>WITHDRAWN</p>
                 </div>
                 <div class="card">

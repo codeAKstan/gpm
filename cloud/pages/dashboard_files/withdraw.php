@@ -1,9 +1,19 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
     exit;
 }
+
+include "../db_conn.php";
+
+$query = "SELECT balance, withdraw, roi FROM portfolio WHERE user_id = ?";
+$stmt = $conn->prepare($query);
+$stmt->execute([$_SESSION['user_id']]);
+$portfolio = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -172,16 +182,16 @@ if (!isset($_SESSION['user_id'])) {
             <div class="wallet-row">
                 <span class="label">Available Balance</span>
                 <span class="separator">-</span>
-                <span class="amount">0.00 USD</span>
+                <span class="amount"><?= number_format($portfolio['balance'], 2) ?> USD</span>
             </div>
             <div class="wallet-row">
                 <span class="label">ROI Balance</span>
                 <span class="separator">-</span>
-                <span class="amount">0.00 USD</span>
+                <span class="amount"><?= number_format($portfolio['roi'], 2) ?> USD</span>
             </div>
         </div>
         <div class="withdraw-container">
-            <button class="withdraw-button">Withdraw</button>
+            <button class="withdraw-button" onclick='window.location.href="wallet_withdraw.php"'>Withdraw</button>
         </div>
     </div>
 
