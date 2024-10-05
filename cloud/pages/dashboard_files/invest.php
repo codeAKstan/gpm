@@ -154,7 +154,7 @@ if (!isset($_SESSION['user_id'])) {
             <div class="in-container">
     <h2>INVESTMENT PLANS</h2>
     <div class="plans">
-      <div class="plan">
+      <div class="plan" id=1>
         <h3>BEGINNER PLAN</h3>
         <div class="price">From $300.00</div>
         <ul>
@@ -165,10 +165,10 @@ if (!isset($_SESSION['user_id'])) {
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
-        <button>Proceed</button>
+        <button onclick="goToOrder(1, 'BEGINNER PLAN', 'From $300.00')">Proceed</button>
       </div>
 
-      <div class="plan">
+      <div class="plan" id=2>
         <h3>INTERMIDATE PLAN</h3>
         <div class="price">From $500.00</div>
         <ul>
@@ -179,10 +179,10 @@ if (!isset($_SESSION['user_id'])) {
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
-        <button>Proceed</button>
+        <button onclick="goToOrder(2, 'INTERMEDIATE PLAN', 'From $500.00')">Proceed</button>
       </div>
 
-      <div class="plan">
+      <div class="plan" id=3>
         <h3>SILVER PLAN</h3>
         <div class="price">From $1,000.00</div>
         <ul>
@@ -193,10 +193,10 @@ if (!isset($_SESSION['user_id'])) {
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
-        <button>Proceed</button>
+        <button onclick="goToOrder(3, 'SILVER PLAN', 'From $1,000.00')">Proceed</button>
       </div>
 
-      <div class="plan">
+      <div class="plan" id=4>
         <h3>GOLD PLAN</h3>
         <div class="price">From $2,000.00</div>
         <ul>
@@ -207,10 +207,10 @@ if (!isset($_SESSION['user_id'])) {
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
-        <button>Proceed</button>
+        <button onclick="goToOrder(4, 'GOLD PLAN', 'From $2,000.00')">Proceed</button>
       </div>
 
-      <div class="plan">
+      <div class="plan" id=5>
         <h3>PROMO PLAN</h3>
         <div class="price">From $5,000.00</div>
         <ul>
@@ -221,9 +221,9 @@ if (!isset($_SESSION['user_id'])) {
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
-        <button>Proceed</button>
+        <button onclick="goToOrder(5, 'PROMO PLAN', 'From $5,000.00')">Proceed</button>
       </div>
-      <div class="plan">
+      <div class="plan" id=6>
         <h3>DIAMOND PLAN</h3>
         <div class="price">From $10,000.00</div>
         <ul>
@@ -234,14 +234,20 @@ if (!isset($_SESSION['user_id'])) {
           <li>Instant Payout</li>
           <li>Instant Withdrawal</li>
         </ul>
-        <button>Proceed</button>
+        <button onclick="goToOrder(6, 'DIAMOND PLAN', 'From $10,000.00')">Proceed</button>
       </div>
 
 
     </div>
   </div>
 
-            
+  
+
+
+
+
+
+
 
 
            
@@ -258,6 +264,12 @@ if (!isset($_SESSION['user_id'])) {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('active');
         });
+    </script>
+    <script>
+      function goToOrder(planId, planName, priceRange) {
+    window.location.href = `order.php?planId=${planId}&planName=${encodeURIComponent(planName)}&priceRange=${encodeURIComponent(priceRange)}`;
+}
+
     </script>
 </body>
 </html>
