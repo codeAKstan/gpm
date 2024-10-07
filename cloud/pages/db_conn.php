@@ -1,9 +1,9 @@
 <?php 
 
 $sName = "localhost";
-$uName = "codeak";
-$pass = "5334";
-$db_name = "gpm_user_registration";
+$uName = "gpmautom_gpm";
+$pass = "f40mordL@100";
+$db_name = "gpmautom_user_registration";
 
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name", 

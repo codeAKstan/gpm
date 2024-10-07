@@ -1,198 +1,186 @@
-<style type="text/css">
-    .who_is .who_stand{
-        background: url(wp-content/themes/vfx_new/images/who_stand.png) center top no-repeat;
-        background-size: cover;
-        padding:50px 0px 35px;
-        margin-bottom:62px;
-    }
-    .who_is .who_stand .inner{text-align:right;}
-    .who_is .who_stand h3{font-size:39px;font-weight:bold;color:#fff;}
-    .who_is .who_stand h3:after{content: "";display:inline-block;margin-top: 22px;width: 90px;height: 4px;background: #fff;}
-    .who_is .who_stand p{font-size:35px;color:#fff;font-weight:bold;line-height:1.5;}
-    .who_is .text_box_list_img{font-size:0;margin-top:100px;}
-    .who_is .text_box_list_img li{width:33.33%;text-align:center;color:#042078;font-size:13px;display:inline-block;}
-    .who_is .text_box_list_img li img{margin-bottom:33px;}
-    @media (max-width: 768px){
-        .who_is .text_box_list_img{margin-top:20px;}
-    }
-     @media (max-width:510px){
-        .who_is .text_box_list_img li{width:100%;text-align:center;color:#042078;font-size:13px;display:block;margin:0 auto;margin-bottom:30px;}
-        .who_is .text_box_list_img li:last-child{margin-bottom:0px;}
-     }
-</style>
-
- 
- 
-<script type="text/javascript">
-		function googleTranslateElementInit() {
-		  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-		}
-		</script>
-
-		<script type="text/javascript">
-				function googleTranslateElementInit() {
-				  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-				}
-				</script>
-
-				<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '15c6f584576aa8ecb1444ad450c03f4810ae76c2';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-</script>
-<noscript> Powered by <a href="https://gpmautomatedtradingsystem.com/%C3%A2%E2%82%AC%C5%93https://www.smartsupp.com%C3%A2%E2%82%AC%C2%9D" target=“_blank”>Smartsupp</a></noscript>
-<script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "", // WhatsApp number
-            call_to_action: "", // Call to action
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
-<!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-    <link rel="alternate" hreflang="fr" href="https://gpmautomatedtradingsystem.com/fr/index.php" />
-	<link rel="alternate" hreflang="zh" href="https://gpmautomatedtradingsystem.com/hk.php" />
-	<link rel="alternate" hreflang="en-SG" href="https://gpmautomatedtradingsystem.com/sg.php" />
-	<link rel="alternate" hreflang="de" href="https://gpmautomatedtradingsystem.com/de/index.php" />
-	<link rel="alternate" hreflang="en" href="index.php" />
-
-    <link rel="alternate" hreflang="cn" href="https://gpmautomatedtradingsystem.com/cn/index.php" />
-	<link rel="alternate" hreflang="my" href="https://gpmautomatedtradingsystem.com/my/index.php" />
-	<link rel="alternate" hreflang="es" href="https://gpmautomatedtradingsystem.com/es/index.php" />
-	<link rel="alternate" hreflang="th" href="https://gpmautomatedtradingsystem.com/th/index.php" />
-	<link rel="alternate" hreflang="id" href="https://gpmautomatedtradingsystem.com/id/index.php" />
-	<link rel="alternate" hreflang="vn" href="https://gpmautomatedtradingsystem.com/vn/index.php" />
-	<title>Best Forex Broker | Regulated Forex Trading, Indicies &amp; More |  GPM Automated Trading System</title>
-
-    		<meta name="google-site-verification" content="zWoFvpN9rZ8J4j3eC4if5d--UcAZTh3fFqRiwgvdkc8" />
-
-		<meta property="og:type" content="website">
-		<meta property="og:title" content=" GPM Automated Trading System">
-		<meta property="og:url" content="index.php">
-		<meta name="twitter:text:title" content="Home">
-
-	<meta property="og:site_name" content=" GPM Automated Trading System">
-
-					<meta property="og:image" content="images/logo.png">
-
-	<meta property="og:locale" content="en_US">
-	<meta name="twitter:card" content="summary">
-			<meta property="og:description" content="Visit the post for more.">
-
-		<meta name="twitter:description" content="Visit the post for more.">
-
-	<meta name="description" content=" | " />
-	<meta charset="UTF-8" />
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<meta name="viewport" content="width=device-width; initial-scale=1, maximum-scale=1"/>
-	<link rel="icon" href="images/logo.png" type="image/x-icon" />
-	<link rel="pingback" href="https://gpmautomatedtradingsystem.com/xmlrpc.php" />
-	<link rel="alternate" type="application/rss+xml" title=" GPM Automated Trading System" href="https://gpmautomatedtradingsystem.com/feed/index.php" />
-	<link rel="alternate" type="application/atom+xml" title=" GPM Automated Trading System" href="https://gpmautomatedtradingsystem.com/feed/atom/index.php" />
-
-<meta name="description"  content="Start trading cryptocurrencies, Forex (FX), Indicies and Commodities Today on the powerful MetaTrader 4 (MT4) platform, with fast execution &amp; tight ECN spreads, with a leading regulated Best Forex Broker,  GPM Automated Trading System." />
-
-<script type="application/ld+json" class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.gpmautomatedtradingsystem.com/#organization","url":"https://www.gpmautomatedtradingsystem.com/","name":" GPM Automated Trading System","sameAs":[]},{"@type":"WebSite","@id":"https://www.gpmautomatedtradingsystem.com/#website","url":"https://www.gpmautomatedtradingsystem.com/","name":" GPM Automated Trading System","publisher":{"@id":"https://www.gpmautomatedtradingsystem.com/#organization"}},{"@type":"WebPage","@id":"https://www.gpmautomatedtradingsystem.com#webpage","url":"https://www.gpmautomatedtradingsystem.com","inLanguage":"en-US","name":" GPM Automated Trading System","isPartOf":{"@id":"https://www.gpmautomatedtradingsystem.com/#website"},"breadcrumb":{"@id":"https://www.gpmautomatedtradingsystem.com#breadcrumblist"},"description":"Start trading Forex (FX), Indicies and Commodities Today on the powerful MetaTrader 4 (MT4) platform, with fast execution &amp; tight ECN spreads, with a leading regulated Best Forex Broker,  GPM Automated Trading System.","datePublished":"2019-08-30T02:00:50+00:00","dateModified":"2019-11-14T02:53:00+00:00","about":{"@id":"https://www.gpmautomatedtradingsystem.com/#organization"}},{"@type":"BreadcrumbList","@id":"https://www.gpmautomatedtradingsystem.com#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.gpmautomatedtradingsystem.com/","url":"https://www.gpmautomatedtradingsystem.com/","name":"Best Forex Broker | Regulated Forex Trading, Indicies &amp; More |  GPM Automated Trading System"}}]}]}</script>
-<link rel="canonical" href="index.php" />
-<!-- All In One SEO Pack -->
-<link rel='dns-prefetch' href='http://s.w.org/' />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.gpmautomatedtradingsystem.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.mind03b.css@ver=5.5.1.css' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-pagenavi-css'  href='wp-content/plugins/wp-pagenavi/pagenavi-css44fd.css@ver=2.70.css' type='text/css' media='all' />
-<link rel='stylesheet' id='addtoany-css'  href='wp-content/plugins/add-to-any/addtoany.min9be6.css@ver=1.15.css' type='text/css' media='all' />
-<script type='text/javascript' src='wp-includes/js/jquery/jquery4a5f.js@ver=1.12.4-wp' id='jquery-core-js'></script>
-<script type='text/javascript' src='wp-content/plugins/add-to-any/addtoany.min4963.js@ver=1.1' id='addtoany-js'></script>
-<link rel="https://api.w.org/" href="https://gpmautomatedtradingsystem.com/wp-json/index.php" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/5.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://gpmautomatedtradingsystem.com/xmlrpc0db0.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
-<link rel='shortlink' href='index.php' />
-<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed675b.json@url=https%253A%252F%252Fwww.gpmautomatedtradingsystem.com%252F" />
-<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embedced2@url=https%253A%252F%252Fwww.gpmautomatedtradingsystem.com%252F&amp;format=xml.html" />
-
-<script data-cfasync="false">
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
-var a2a_config = a2a_config || {};
-a2a_config.templates = {
-    twitter: "${title} ${link} via @VantageFX"
-};
-(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
-</script>
-<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 	    <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/vfx_new/reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/vfx_new/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/vfx_new/style2be7.css@v=1604589080.css" />
-	    <link rel="stylesheet" type="text/css" media="all" href="wp-content/themes/vfx_new/home2be7.css@v=1604589080.css" />
-        <script type="text/javascript" src="wp-content/themes/vfx_new/js/jquery.bxslider.js"></script>
-    <script type="text/javascript" src="wp-content/themes/vfx_new/js/echarts.min.js"></script>
-    <!-- 让所有浏览器都支持 ES6 Promise 对象 -->
-    <script type="text/javascript" src="wp-content/themes/vfx_new/js/bluebird.js"></script>
-    <script type="text/javascript" src="wp-content/themes/vfx_new/js/cookie2be7.js@v=1604589080"></script>
-    <script type="text/javascript" src="wp-content/themes/vfx_new/js/myscript2be7.js@v=1604589080"></script>
-    <script src="https://gpmautomatedtradingsystem.com/js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"></script>
-
-    <style>.dtpcnt{opacity: 0;}</style>
-    <script>
-        (function(b,a,f,n,c,l,g,h,k,d,m,e){b[c]||(b[c]={},b[c].state={callbackQueue:[]},b[c].registerConversion=function(a){b[c].state.callbackQueue.push(a)},b[c].registerConversion(function(a){}),(k=/[?&]cpid(=([^&#]*)|&|#|$)/.exec(b.location.href))&&k[2]&&(d=k[2],m=a.cookie.match(new RegExp("(^| )vl-"+d+"=([^;]+)"))),g=a.createElement("script"),h=a.scripts[0],g.src=l+(-1===l.indexOf("?")?"?":"&")+"oref="+f(a.referrer)+"&ourl="+f(location[n])+"&opt="+f(a.title)+"&t="+(new Date).getTime()+(m?"&uw=no":""),
-    h.parentNode.insertBefore(g,h),d&&(e=new Date,e.setTime(e.getTime()+864E5),a.cookie="vl-"+d+"=1; expires="+e.toGMTString()+"; path=/"))})(window,document,encodeURIComponent,"href","dtpCallback","track. GPM Automated Trading System.com/d/.php");
+    <script type="text/javascript" async="" src="snap.licdn.com/li.lms-analytics/insight.min.js"></script>
+    <script async="" src="gtm5445.php"></script>
+    <script src=".php.html"></script>
+    <script async="" src="static.addtoany.com/menu/page.js"></script>
+    <script type="text/javascript" async="" src="js/bundle.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
     </script>
-    <noscript><link href="https://gpmautomatedtradingsystem.com/track.&#32;GPM&#32;Automated&#32;Trading&#32;System.com/d/30c8.php?noscript=true" rel="stylesheet"/></noscript>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="js/element.js"></script>
+    <script src="js/l1jvxbbukqt6lvrgsx8m6ir8a4tuugwf.js" async=""></script>
+
+
+    <link rel="alternate" hreflang="fr" href="fr/index.php">
+    <link rel="alternate" hreflang="zh" href="hk.php">
+    <link rel="alternate" hreflang="en-SG" href="sg.php">
+    <link rel="alternate" hreflang="de" href="de/index.php">
+    <link rel="alternate" hreflang="en" href="index.php">
+
+    <link rel="alternate" hreflang="cn" href="cn/index.php">
+    <link rel="alternate" hreflang="my" href="my/index.php">
+    <link rel="alternate" hreflang="es" href="es/index.php">
+    <link rel="alternate" hreflang="th" href="th/index.php">
+    <link rel="alternate" hreflang="id" href="id/index.php">
+    <link rel="alternate" hreflang="vn" href="vn/index.php">
+    <title>Best Forex Broker | Regulated Forex Trading, Indicies &amp; More | GPM AUTOMATED TRADING SYSTEM</title>
+
+    <meta name="google-site-verification" content="zWoFvpN9rZ8J4j3eC4if5d--UcAZTh3fFqRiwgvdkc8">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" GPM AUTOMATED TRADING SYSTEM">
+    <meta property="og:url" content="index.php">
+    <meta name="twitter:text:title" content="Home">
+
+    <meta property="og:site_name" content=" GPM AUTOMATED TRADING SYSTEM">
+
+    <meta property="og:image" content="images/logo.png">
+
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:description" content="Visit the post for more.">
+
+    <meta name="twitter:description" content="Visit the post for more.">
+
+    <meta name="description" content=" | ">
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width; initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="pingback" href="xmlrpc.php">
+    <link rel="alternate" type="application/rss+xml" title=" GPM AUTOMATED TRADING SYSTEM" href="feed/index.php">
+    <link rel="alternate" type="application/atom+xml" title=" GPM AUTOMATED TRADING SYSTEM" href="feed/atom/index.php">
+
+    <meta name="description"
+        content="Start trading cryptocurrencies, Forex (FX), Indicies and Commodities Today on the powerful MetaTrader 4 (MT4) platform, with fast execution &amp; tight ECN spreads, with a leading regulated Best Forex Broker,  GPM AUTOMATED TRADING SYSTEM.">
+
+    <script type="application/ld+json"
+        class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.gpmautomatedtradingsystem.com/#organization","url":"https://www.gpmautomatedtradingsystem.com/","name":" GPM AUTOMATED TRADING SYSTEM","sameAs":[]},{"@type":"WebSite","@id":"https://www.gpmautomatedtradingsystem.com/#website","url":"https://www.gpmautomatedtradingsystem.com/","name":" GPM AUTOMATED TRADING SYSTEM","publisher":{"@id":"https://www.gpmautomatedtradingsystem.com/#organization"}},{"@type":"WebPage","@id":"https://www.gpmautomatedtradingsystem.com#webpage","url":"https://www.gpmautomatedtradingsystem.com","inLanguage":"en-US","name":" GPM AUTOMATED TRADING SYSTEM","isPartOf":{"@id":"https://www.gpmautomatedtradingsystem.com/#website"},"breadcrumb":{"@id":"https://www.gpmautomatedtradingsystem.com#breadcrumblist"},"description":"Start trading Forex (FX), Indicies and Commodities Today on the powerful MetaTrader 4 (MT4) platform, with fast execution & tight ECN spreads, with a leading regulated Best Forex Broker,  GPM AUTOMATED TRADING SYSTEM.","datePublished":"2019-08-30T02:00:50+00:00","dateModified":"2019-11-14T02:53:00+00:00","about":{"@id":"https://www.gpmautomatedtradingsystem.com/#organization"}},{"@type":"BreadcrumbList","@id":"https://www.gpmautomatedtradingsystem.com#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.gpmautomatedtradingsystem.com/","url":"https://www.gpmautomatedtradingsystem.com/","name":"Best Forex Broker | Regulated Forex Trading, Indicies & More |  GPM AUTOMATED TRADING SYSTEM"}}]}]}</script>
+    <link rel="canonical" href="index.php">
+    <!-- All In One SEO Pack -->
+    <link rel="dns-prefetch" href="https://s.w.org/">
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/www.gpmautomatedtradingsystem.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1" } };
+        !function (e, a, t) { var r, n, o, i, p = a.createElement("canvas"), s = p.getContext && p.getContext("2d"); function c(e, t) { var a = String.fromCharCode; s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0); var r = p.toDataURL(); return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL() } function l(e) { if (!s || !s.fillText) return !1; switch (s.textBaseline = "top", s.font = "600 32px Arial", e) { case "flag": return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447])); case "emoji": return !c([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212]) }return !1 } function d(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (i = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, o = 0; o < i.length; o++)t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="https://www.gpmautomatedtradingsystem.com/wp-includes/js/wp-emoji-release.min.js?ver=5.5.1"
+        type="text/javascript" defer=""></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css" href="css/style.mind03b.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wp-pagenavi-css" href="css/pagenavi-css44fd.css" type="text/css" media="all">
+    <link rel="stylesheet" id="addtoany-css" href="css/addtoany.min9be6.css" type="text/css" media="all">
+    <script type="text/javascript" src="js/jquery4a5f.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="js/addtoany.min4963.js" id="addtoany-js"></script>
+    <link rel="https://api.w.org/" href="wp-json/index.php">
+    <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/5.json">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml">
+    <link rel="shortlink" href="index.php">
+    <link rel="alternate" type="application/json+oembed"
+        href="wp-json/oembed/1.0/embed675b.json?url=https%3A%2F%2Fwww.gpmautomatedtradingsystem.com%2F">
+    <link rel="alternate" type="text/xml+oembed"
+        href="wp-json/oembed/1.0/embedced2?url=https%3A%2F%2Fwww.gpmautomatedtradingsystem.com%2F&amp;format=xml">
+
+    <script data-cfasync="false">
+        window.a2a_config = window.a2a_config || {}; a2a_config.callbacks = []; a2a_config.overlays = []; a2a_config.templates = {};
+        var a2a_config = a2a_config || {};
+        a2a_config.templates = {
+            twitter: "${title} ${link} via @VantageFX"
+        };
+        (function (d, s, a, b) { a = d.createElement(s); b = d.getElementsByTagName(s)[0]; a.async = 1; a.src = "static.addtoany.com/menu/page.js"; b.parentNode.insertBefore(a, b); })(document, "script");
+    </script>
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/style2be7.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/home2be7.css">
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <!-- 让所有浏览器都支持 ES6 Promise 对象 -->
+    <script type="text/javascript" src="js/bluebird.js"></script>
+    <script type="text/javascript" src="js/cookie2be7.js"></script>
+    <script type="text/javascript" src="js/myscript2be7.js"></script>
+    <script src="js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"></script>
+
+    <style>
+        .dtpcnt {
+            opacity: 0;
+        }
+    </style>
+    <script>
+        (function (b, a, f, n, c, l, g, h, k, d, m, e) {
+            b[c] || (b[c] = {}, b[c].state = { callbackQueue: [] }, b[c].registerConversion = function (a) { b[c].state.callbackQueue.push(a) }, b[c].registerConversion(function (a) { }), (k = /[?&]cpid(=([^&#]*)|&|#|$)/.exec(b.location.href)) && k[2] && (d = k[2], m = a.cookie.match(new RegExp("(^| )vl-" + d + "=([^;]+)"))), g = a.createElement("script"), h = a.scripts[0], g.src = l + (-1 === l.indexOf("?") ? "?" : "&") + "oref=" + f(a.referrer) + "&ourl=" + f(location[n]) + "&opt=" + f(a.title) + "&t=" + (new Date).getTime() + (m ? "&uw=no" : ""),
+                h.parentNode.insertBefore(g, h), d && (e = new Date, e.setTime(e.getTime() + 864E5), a.cookie = "vl-" + d + "=1; expires=" + e.toGMTString() + "; path=/"))
+        })(window, document, encodeURIComponent, "href", "dtpCallback", "track. GPM AUTOMATED TRADING SYSTEM.com/d/.php");
+    </script>
+    <noscript>
+        <link href="track. GPM AUTOMATED TRADING SYSTEM.com/d/30c8.php?noscript=true" rel="stylesheet" />
+    </noscript>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'www.googletagmanager.com/gtm5445.php?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T38KSHM');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'www.googletagmanager.com/gtm5445.php?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T38KSHM');</script>
     <!-- End Google Tag Manager -->
 
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-T38KSHM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-T38KSHM" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <script type="text/javascript">
         _linkedin_partner_id = "2734932";
         window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
         window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-        </script><script type="text/javascript">
-        (function(){var s = document.getElementsByTagName("script")[0];
-        var b = document.createElement("script");
-        b.type = "text/javascript";b.async = true;
-        b.src = "snap.licdn.com/li.lms-analytics/insight.min.js";
-        s.parentNode.insertBefore(b, s);})();
+    </script>
+    <script type="text/javascript">
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })();
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2734932&amp;fmt=gif" />
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=2734932&fmt=gif" />
     </noscript>
 
 
@@ -200,73 +188,71 @@ a2a_config.templates = {
 
 
     <script>
-        jQuery(document).ready(function($){
+        jQuery(document).ready(function ($) {
             // th 国家开始
 
             var url_data = window.location.href;
 
             var url_data = "index.php";
-            if(url_data.indexOf(" GPM Automated Trading System.com/index.php") > -1)
-            {
-              url_data=url_data.substring(url_data.indexOf(" GPM Automated Trading System.com/index.php") , url_data.length);
-			  url_data=url_data.substring(url_data.indexOf("index.php") , url_data.length);
+            if (url_data.indexOf(" GPM AUTOMATED TRADING SYSTEM.com/index.php") > -1) {
+                url_data = url_data.substring(url_data.indexOf(" GPM AUTOMATED TRADING SYSTEM.com/index.php"), url_data.length);
+                url_data = url_data.substring(url_data.indexOf("index.php"), url_data.length);
             }
-            else
-            {
-              url_data="";
+            else {
+                url_data = "";
             }
 
 
             var dxt_geo = {
-                onSuccess : function(geoipResponse) {
+                onSuccess: function (geoipResponse) {
                     var dxt_this = this;
-                    var thurl = 'https://www.gpmautomatedtradingsystem.com/th'+url_data;
+                    var thurl = 'https://www.gpmautomatedtradingsystem.com/th' + url_data;
                     var myurl = 'my/index.php';
 
-                    if(geoipResponse.country.iso_code) {
+                    if (geoipResponse.country.iso_code) {
                         var code = geoipResponse.country.iso_code.toLowerCase();
-                        var ip_address= geoipResponse.traits.ip_address;
+                        var ip_address = geoipResponse.traits.ip_address;
                         console.log(code);
-                        if("th" == code || ip_address=="58.82.145.34") {
+                        if ("th" == code || ip_address == "58.82.145.34") {
                             window.location.replace(thurl);
                         }
-						/*
+                        /*
                         if("my" == code) {
                             window.location.replace(myurl);
                         }
-						*/
+                        */
                     }
                 },
 
-                onError : function(error) {
+                onError: function (error) {
                     var dxt_this = this;
                 },
 
-                init : function() {
+                init: function () {
                     var dxt_this = this;
-					if(typeof(geoip2)!="undefined")
-					{
-						geoip2.country(dxt_this.onSuccess, dxt_this.onError);
-					}
+                    if (typeof (geoip2) != "undefined") {
+                        geoip2.country(dxt_this.onSuccess, dxt_this.onError);
+                    }
                 },
 
             };
 
-            var goen=getPar("goen");
+            var goen = getPar("goen");
 
-            if (goen && goen=='en'){
-                setCookie("goen",goen);
+            if (goen && goen == 'en') {
+                setCookie("goen", goen);
 
             };
 
-            var cookie=getCookie("goen");
+            var cookie = getCookie("goen");
 
-            if(!cookie&&!goen){
+            if (!cookie && !goen) {
                 dxt_geo.init();
             }
             // th 国家结束
         })
     </script>
+    <script async="true" type="text/javascript" src="js/roundtrip.js"></script>
 </head>
 <body class="home page-template page-template-template_home page-template-template_home-php page page-id-5">
 <div id="google_translate_element"></div>

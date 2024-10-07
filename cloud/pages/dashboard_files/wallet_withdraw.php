@@ -202,7 +202,7 @@ h2 {
     </div>
 
     <div class="form-group">
-        <button class="btn-deposit" type="submit">Deposit Now</button>
+        <button class="btn-deposit" type="submit">Withdraw Now</button>
     </div>
 </form>
 
